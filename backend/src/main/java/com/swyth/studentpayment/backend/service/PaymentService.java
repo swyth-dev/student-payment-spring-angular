@@ -9,7 +9,6 @@ import com.swyth.studentpayment.backend.repository.StudentRepository;
 import jakarta.transaction.Transactional;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -35,8 +34,6 @@ public class PaymentService {
     public Iterable<Payment> findAllPayments() {
         return paymentRepository.findAll();
     }
-
-    ;
 
     public Optional<Payment> findPaymentById(UUID id) {
         return paymentRepository.findById(id);
@@ -77,7 +74,7 @@ public class PaymentService {
             Files.createDirectories(folderPath);
         }
 
-        String fileName = UUID.randomUUID().toString() + ".pdf";
+        String fileName = UUID.randomUUID() + ".pdf";
         Path filePath = Paths.get(System.getProperty("user.home"), "student-data", "data", fileName);
         Files.copy(file.getInputStream(), filePath);
 

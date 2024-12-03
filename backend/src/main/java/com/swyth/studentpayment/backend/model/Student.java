@@ -2,7 +2,6 @@ package com.swyth.studentpayment.backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
 

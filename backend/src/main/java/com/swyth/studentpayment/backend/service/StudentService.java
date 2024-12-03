@@ -1,8 +1,6 @@
 package com.swyth.studentpayment.backend.service;
 
-import com.swyth.studentpayment.backend.model.Payment;
 import com.swyth.studentpayment.backend.model.Student;
-import com.swyth.studentpayment.backend.repository.PaymentRepository;
 import com.swyth.studentpayment.backend.repository.StudentRepository;
 import jakarta.transaction.Transactional;
 import lombok.Data;
