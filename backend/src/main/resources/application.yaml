@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: student-payments-api
+  datasource:
+    url: jdbc:h2:mem:students-db
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8021
+
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql:
+              BasicBinder: trace
+
